@@ -14,10 +14,10 @@
 						<table class="table mt-3">
 							<thead class="thead-dark">
 								<tr>
-									<th scope="col">ID</th>
+									<th scope="col">CODIGO</th>
 									<th scope="col">FECHA</th>
-									<th scope="col">PRODUCTO</th>
-									<th scope="col">CLIENTE</th>
+									<th scope="col">CODIGO_CLIENTE</th>
+									<th scope="col">CODIGO_PRODUCTO</th>
 									<th scope="col">CANTIDAD</th>
 									<th scope="col">SUBTOTAL</th>
 									<th scope="col">IGV</th>
@@ -28,18 +28,18 @@
 							</thead>
 							<tbody>
 								<tr th:each="venta : ${ventas}">
-									<th scope="row" th:text="${venta.id}"></th>
+									<th scope="row" th:text="${venta.codigo}"></th>
 									<td th:text="${venta.fecha}"></td>
-									<td th:text="${venta.producto}"></td>
-									<td th:text="${venta.cliente}"></td>
+									<td th:text="${venta.codigo_cliente}"></td>
+									<td th:text="${venta.codigo_producto}"></td>
 									<td th:text="${venta.cantidad}"></td>
 									<td th:text="${venta.subtotal}"></td>
 									<td th:text="${venta.igv}"></td>
 									<td th:text="${venta.total}"></td>
 									<td><a class="btn btn-warning"
-										th:href="@{/ventas/form/} +${venta.id}" th:text="Editar"></a></td>
+										th:href="@{/ventas/form/} +${venta.codigo}" th:text="Editar"></a></td>
 									<td><a class="btn btn-danger"
-										th:href="@{/ventas/eliminar/} +${venta.id}" th:text="Eliminar" onclick="return confirm('Estas seguro de eliminar')"></a></td>
+										th:href="@{/ventas/eliminar/} +${venta.codigo}" th:text="Eliminar" onclick="return confirm('Estas seguro de eliminar')"></a></td>
 								</tr>
 							</tbody>
 						</table>

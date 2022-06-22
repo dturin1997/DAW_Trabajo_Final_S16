@@ -16,12 +16,15 @@ public class Cliente {
 		@NotNull
 		private String nombres;
 		@NotNull
+		private String edad;
+		@NotNull
+		private String sexo;
+		@NotNull
 		private String dni;
 		@NotNull
 		private String telefono;
 		@NotNull
 		private String direccion;
-
 		public Long getCodigo() {
 			return codigo;
 		}
@@ -39,6 +42,18 @@ public class Cliente {
 		}
 		public void setNombres(String nombres) {
 			this.nombres = nombres;
+		}
+		public String getEdad() {
+			return edad;
+		}
+		public void setEdad(String edad) {
+			this.edad = edad;
+		}
+		public String getSexo() {
+			return sexo;
+		}
+		public void setSexo(String sexo) {
+			this.sexo = sexo;
 		}
 		public String getDni() {
 			return dni;
@@ -60,9 +75,10 @@ public class Cliente {
 		}
 		@Override
 		public String toString() {
-			return "Cliente [codigo=" + codigo + ", apellidos=" + apellidos + ", nombres=" + nombres + ", dni=" + dni
-					+ ", telefono=" + telefono + ", direccion=" + direccion + "]";
+			return "Cliente [codigo=" + codigo + ", apellidos=" + apellidos + ", nombres=" + nombres + ", edad=" + edad
+					+ ", sexo=" + sexo + ", dni=" + dni + ", telefono=" + telefono + ", direccion=" + direccion + "]";
 		}
+		
 		
 		
 }

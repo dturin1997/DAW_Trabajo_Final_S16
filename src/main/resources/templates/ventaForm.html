@@ -15,7 +15,7 @@
 						<div class="form-group">
 							<label for="id">Cliente</label> 
 							<select th:field="*{cliente}" class="form-control">
-
+							<select th:field="*{codigo_cliente}" class="form-control">
 		                         <option value=""> -- </option>
 		                         <option  th:each="cliente : ${clientes}" th:value="${cliente.nombres}" th:text="${cliente.nombres}"/>
 		                  	</select>
@@ -23,6 +23,7 @@
 						<div class="form-group">
 							<label for="id">Producto</label> 
 	           				 <select th:field="*{producto}" class="form-control">
+	           				 <select th:field="*{codigo_producto}" class="form-control">
 		                         <option value=""> -- </option>
 		                         <option  th:each="producto : ${productos}" th:value="${producto.nombre} " th:text="${producto.nombre} +' '+ ${producto.precio} + ' Soles'"/>
 
