@@ -21,6 +21,7 @@ public class Cliente {
 		private String telefono;
 		@NotNull
 		private String direccion;
+
 		public Long getCodigo() {
 			return codigo;
 		}
