@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head  th:replace="/layout/template :: header" >
+</head>
+<body>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-12">
+			<nav th:replace="/layout/template :: navegacion"></nav>
+			<div class="card">
+				<div class="card-header" ></div>
+				<div class="card-body">
+				<h3 th:if="ERROR!=null" th:text="${ERROR}" style="color:red"></h3>
+
+					<form th:action="@{/clientetours/insertar}" th:object="${clientetour}" method="POST">
+						<div class="form-group">
+							<label for="cliente_codigo">Codigo Cliente</label> 
+							<input type="text" class="form-control" th:field="*{cliente_codigo}" name="cliente_codigo">
+						</div>
+						<div class="form-group">
+							<label for="tour_codigo">Codigo Tour</label>
+							<input type="text" class="form-control" th:field="*{tour_codigo}" name="tour_codigo">
+						</div>
+						
+						<input type="submit" th:value="${btn}" class="btn btn-primary">
+					</form>
+				</div>
+			</div>
+		</div>		
+	</div>
+</div>
+</body>
+</html>
