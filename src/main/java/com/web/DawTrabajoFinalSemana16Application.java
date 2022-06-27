@@ -20,8 +20,10 @@ public class DawTrabajoFinalSemana16Application implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		String password1="user";
 		String password2="admin";
+		String password3="miembro";
 		System.out.println(passEncripta.encode(password1));
 		System.out.println(passEncripta.encode(password2));
+		System.out.println(passEncripta.encode(password3));
 		
 	}
 

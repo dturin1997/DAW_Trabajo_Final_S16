@@ -54,6 +54,13 @@ public class ClienteTourController {
 			model.addAttribute("btn", "Crear Cliente - Tour");
 			return "clientetourForm";
 		}else {
+			
+		System.out.println("Inicio");
+		System.out.println(clientetour.getId());
+		System.out.println(clientetour.getCliente_codigo());
+		System.out.println(clientetour.getTour_codigo());
+		System.out.println("Fin");
+		
 		clientetourService.guardar(clientetour);
 		return "redirect:/clientetours/listar";
 		}

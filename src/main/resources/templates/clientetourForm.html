@@ -14,6 +14,10 @@
 
 					<form th:action="@{/clientetours/insertar}" th:object="${clientetour}" method="POST">
 						<div class="form-group">
+							<label for="id" hidden>Id</label> 
+							<input type="text" class="form-control" th:field="*{id}" name="id" hidden>
+						</div>
+						<div class="form-group">
 							<label for="cliente_codigo">Codigo Cliente</label> 
 							<input type="text" class="form-control" th:field="*{cliente_codigo}" name="cliente_codigo">
 						</div>
