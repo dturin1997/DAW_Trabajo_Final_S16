@@ -3,10 +3,10 @@
 <head th:replace="/layout/template :: header">
 </head>
 <body>
+<nav th:replace="/layout/template :: navegacion"></nav>
 <div class="container">
 	<div class="row">
 		<div class="col-12">
-			<nav th:replace="/layout/template :: navegacion"></nav>
 			<div class="card mt-5">
 				<div class="card-header"></div>
 				<div class="card-body">
@@ -23,13 +23,13 @@
 							</thead>
 							<tbody>
 								<tr th:each="clientetour : ${clientetours}">
-									<th scope="row" th:text="${clientetour.codigo}"></th>
+									<th scope="row" th:text="${clientetour.id}"></th>
 									<td th:text="${clientetour.cliente_codigo}"></td>
 									<td th:text="${clientetour.tour_codigo}"></td>
 									<td><a class="btn btn-warning"
-										th:href="@{/clientetours/form/} +${clientetour.codigo}" th:text="Editar"></a></td>
+										th:href="@{/clientetours/form/} +${clientetour.id}" th:text="Editar"></a></td>
 									<td><a class="btn btn-danger"
-										th:href="@{/clientetours/eliminar/} +${clientetour.codigo}" th:text="Eliminar" onclick="return confirm('Estas seguro de eliminar')"></a></td>
+										th:href="@{/clientetours/eliminar/} +${clientetour.id}" th:text="Eliminar" onclick="return confirm('Estas seguro de eliminar')"></a></td>
 								</tr>
 							</tbody>
 						</table>
@@ -38,5 +38,6 @@
 		</div>		
 	</div>
 </div>
+<footer th:replace="/layout/footer :: pie"></footer>
 </body>
 </html>

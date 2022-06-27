@@ -3,10 +3,10 @@
 <head th:replace="/layout/template :: header">
 </head>
 <body>
+<nav th:replace="/layout/template :: navegacion"></nav>
 <div class="container">
 	<div class="row">
 		<div class="col-12">
-			<nav th:replace="/layout/template :: navegacion"></nav>
 			<div class="card mt-5">
 				<div class="card-header"></div>
 				<div class="card-body">
@@ -48,5 +48,6 @@
 		</div>		
 	</div>
 </div>
+<footer th:replace="/layout/footer :: pie"></footer>
 </body>
 </html>

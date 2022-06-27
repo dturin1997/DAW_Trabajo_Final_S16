@@ -20,11 +20,11 @@ public class ClienteTourService {
 		 return iClienteTour.findAll();
 	}	
 	public  ClienteTour buscar(Long codigo) {
-		return  iClienteTour.findByCodigo(codigo);
+		return  iClienteTour.findById(codigo);
 	}	
 	public boolean eliminar (Long codigo) {
 		try {
-			iClienteTour.delete(iClienteTour.findByCodigo(codigo));
+			iClienteTour.delete(iClienteTour.findById(codigo));
 			return true;
 		} catch (Exception e) {
 			return false;

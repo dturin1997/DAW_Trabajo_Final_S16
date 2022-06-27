@@ -5,10 +5,28 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
 <meta charset="ISO-8859-1">
 <title th:text="${titulo}"></title>
+<style>
+	body{
+		height: 100%;
+		background: linear-gradient(45deg, rgb(11, 57, 244), transparent),
+		repeating-linear-gradient(45deg, rgb(183,0,255) 0%, rgb(183,0,255) 5%, transparent 5%, transparent 10%, rgb(183,0,255) 10%, rgb(183,0,255) 11%,transparent 11%, transparent 13%),
+		rgb(216,118,255) repeating-linear-gradient(-45deg, rgba(183,0,255,0.5) 0%, rgba(183,0,255,0.5) 5%, transparent 5%, transparent 10%);
+		position: relative;
+		padding-bottom: 120px;
+		min-height: 100vh;
+	}
+	body::-webkit-scrollbar{
+		width: 7px;
+	}
+	body::-webkit-scrollbar-thumb{
+		background: #CF2342;
+	}
+	
+</style>
 </head>
 <body>
-	<nav th:fragment="navegacion" class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="#">Inicio</a>
+	<nav th:fragment="navegacion" class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(0, 128, 255);">
+		<a class="navbar-brand" href="#" style="font-family: Arial, Helvetica, sans-serif;">Inicio</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -18,17 +36,14 @@
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a class="nav-link" href="/productos/listar">Productos</a></li>
-				<li class="nav-item"><a class="nav-link" href="/clientes/listar">Clientes</a></li>
-				<li class="nav-item"><a class="nav-link" href="/ventas/listar">Ventas</a></li>
-				<li class="nav-item"><a class="nav-link" href="/tours/listar">Tours</a></li>
-				<li class="nav-item"><a class="nav-link" href="/agencias/listar">Agencias</a></li>
+				<li class="nav-item active"><a class="nav-link" href="/productos/listar" style="color: white; font-family: Arial, Helvetica, sans-serif;">Productos</a></li>
+				<li class="nav-item"><a class="nav-link" href="/clientes/listar" style="color: white; font-family: Arial, Helvetica, sans-serif;">Clientes</a></li>
+				<li class="nav-item"><a class="nav-link" href="/ventas/listar" style="color: white; font-family: Arial, Helvetica, sans-serif;">Ventas</a></li>
+				<li class="nav-item"><a class="nav-link" href="/tours/listar" style="color: white; font-family: Arial, Helvetica, sans-serif;">Tours</a></li>
+				<li class="nav-item"><a class="nav-link" href="/agencias/listar" style="color: white; font-family: Arial, Helvetica, sans-serif;">Agencias</a></li>
+				<li class="nav-item"><a class="nav-link" href="/clientetours/listar" style="color: white; font-family: Arial, Helvetica, sans-serif;">Cliente - Tour</a></li>
 			</ul>
-			<form class="form-inline my-2 my-lg-0">
-				<input class="form-control mr-sm-2" type="search"
-					placeholder="Search" aria-label="Search">
-				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-			</form>
+			
 		</div>
 	</nav>
 </body>

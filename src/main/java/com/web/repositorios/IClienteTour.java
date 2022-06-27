@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
 import com.web.modelo.ClienteTour;
 @Repository
 public interface IClienteTour extends JpaRepository<ClienteTour, Serializable> {
-	public abstract ClienteTour findByCodigo(Long codigo);
+	public abstract ClienteTour findById(Long codigo);
 }

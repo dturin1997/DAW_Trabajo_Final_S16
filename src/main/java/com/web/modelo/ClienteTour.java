@@ -1,5 +1,7 @@
 package com.web.modelo;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,19 +12,23 @@ import com.sun.istack.NotNull;
 
 @Entity
 @Table(name="CLIENTES_TOURS")
-public class ClienteTour {
+public class ClienteTour implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3061291845719924114L;
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long codigo;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
 	@NotNull
 	private Long cliente_codigo;
 	@NotNull
 	private Long tour_codigo;
-	public Long getCodigo() {
-		return codigo;
+	public Long getId() {
+		return id;
 	}
-	public void setCodigo(Long codigo) {
-		this.codigo = codigo;
+	public void setId(Long id) {
+		this.id = id;
 	}
 	public Long getCliente_codigo() {
 		return cliente_codigo;
@@ -38,8 +44,9 @@ public class ClienteTour {
 	}
 	@Override
 	public String toString() {
-		return "ClienteTour [codigo=" + codigo + ", cliente_codigo=" + cliente_codigo + ", tour_codigo=" + tour_codigo
-				+ "]";
+		return "ClienteTour [id=" + id + ", cliente_codigo=" + cliente_codigo + ", tour_codigo=" + tour_codigo + "]";
 	}
+	
+	
 	
 }
